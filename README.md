@@ -8,7 +8,7 @@ docker run -d -e USERNAME=test -e PASSWORD=test -p 81:80 dober/webdav
 or use compose file:
 ```
  webdav:
-      image:  dober/webdav
+      image: dober/webdav
       ports:
         - "127.0.0.1:81:80"
       volumes:
