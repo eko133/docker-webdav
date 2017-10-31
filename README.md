@@ -5,3 +5,18 @@ You can run this container in following way. You can then access the WebDAV inst
 ```
 docker run -d -e USERNAME=test -e PASSWORD=test -p 81:80 dober/webdav-docker
 ```
+or use compose file:
+```
+ webdav:
+      image:  morrisjobke/webdav
+      cpuset: 2,3
+      mem_limit: 200m
+      ports:
+        - "127.0.0.1:81:80"
+      volumes:
+        - /data/webdav:/var/webdav
+      environment:
+        - USERNAME=test
+        - PASSWORD=test
+      restart: always
+ ```
