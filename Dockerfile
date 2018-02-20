@@ -1,5 +1,5 @@
 
-FROM ubuntu:16.10
+FROM ubuntu:16.04
 MAINTAINER hey@morrisjobke.de
 
 RUN apt-get update
